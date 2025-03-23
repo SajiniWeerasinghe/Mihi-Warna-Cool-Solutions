@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* light gray for a calm background */
+    color: #333;
+}
+
+header {
+    background-color: #ffffff; /* Olive green background */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #000000; /* white text for contrast */
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  
+}
+header h1:hover{
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; 
+}
+
+nav ul li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #494747; /* Regular text color */
+    font-weight: light;
+    position: relative; /* Needed for pseudo-element positioning */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+nav ul li a:hover {
+    color: rgb(52, 174, 40); /* Light yellow to complement the olive green */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Move the underline a little bit down */
+    width: 0; /* Start with no underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: rgb(52, 174, 40); /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Underline will expand to full width when hovered */
+}
+
+
+.contact-btn {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 2px solid #000000; /* white border for the button */
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000; ; /* white text */
+    transition: all 0.3s;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    background: rgb(52, 174, 40); /* light yellow background on hover */
+    color: #ffffff; /* dark text color on hover */
+    border: 2px solid rgb(52, 174, 40);
+    
+}
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+.li-btn{
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000; ; /* white text */
+    transition: all 0.3s;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+
+
